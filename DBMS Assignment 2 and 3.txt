@@ -1,18 +1,28 @@
 Umesh Manjare -- 200240520110
 
+======================================================================================================================
+
 ASSIGNMENT 3
+
 1) Which field of the Customers table is the primary key?
 -->FIELD is [Customer number]
+
 2) What is the 4th column of the Customers table?
 -->the fourth column of consumers table is RATING.
+
 3) What is another word for row? For column?
 -->Tuple ,entity and record.
+
 4) Why isn’t it possible to see the first five rows of a table?
 --> its not possible because row is stored in the memor available and hence when retrievig rows are displayed 
 as per thier address in ascending order.
 
+
+========================================================================================================================
+
 ASSIGNMENT 4
 1) Does ANSI recognize the data type DATE?
-==>yes it does recognize the DATATYPE DATE 
+==>yes it does recognize the DATATYPE DATE
+
 2) Which subdivision of SQL is used to insert values in tables?
 ==>Insert into --- values();
