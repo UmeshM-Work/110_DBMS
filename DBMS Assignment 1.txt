@@ -1,3 +1,9 @@
+Umesh Manjare---200240520110
+
+ASSIGNMENT 1
+
+1)
+
 show databases;
 use umeshwork;
 CREATE TABLE SALESPEOPLE 
@@ -12,6 +18,9 @@ insert into SALESPEOPLE values(1002,'Serres','San Jose',.13),
 (1007,'Rifkin','Barcelona',.15),
 (1003,'Axelrod','New York',.10);
 SELECT * from SALESPEOPLE;
+
+
+2)
 
 CREATE TABLE CUSTOMERS 
 (
@@ -29,6 +38,9 @@ insert into CUSTOMERS values(2001,'Hoffman','London',100,1001),
 (2008,'Cisneros','San Jose',300,1007),
 (2007,'Pereira','Rome',100,1004);
 SELECT * from CUSTOMERS;
+
+
+3)
 
 CREATE TABLE ORDERS
  (
