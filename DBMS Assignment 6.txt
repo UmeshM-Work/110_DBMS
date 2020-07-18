@@ -1,0 +1,47 @@
+Name : UMESH MANJARE
+ID : 200240520110
+
+=================================================================================
+
+
+ASSIGNMENT 6
+
+
+=================================================================================
+
+1) Write two different queries that would produce all orders taken on October 3rd or
+4th, 1990.
+-->
+      select * from orders where ODATE='1990-10-03' or ODATE='1990-10-4';
+      
+
+________________________________________________________________________________________________
+
+2) Write a query that selects all of the customers serviced by Peel or Motika.
+(Hint: the snum field relates the two tables to one another).
+-->
+      select * from salespeople where Sname='Peel' or Sname='Motika';
+      select * from customers where snum in ( select snum from salespeople where sname='peel' or sname='motika');
+________________________________________________________________________________________________
+
+3) Write a query that will produce all the customers whose names begin with a letter
+from ‘A’ to ‘G’.
+--> 
+    select * from customers where Cname >='A' and Cname <'H';
+     
+________________________________________________________________________________________________
+
+4) Write a query that selects all customers whose names begin with the letter ‘C’.
+-->
+     select * from customers where CNAME like 'C%';
+     select * from customers where CNAME>='C' and CNAME<'D';
+
+________________________________________________________________________________________________
+
+5) Write a query that selects all orders except those with zeroes or NULLs in the amt
+field.
+--> 
+      select * from orders where AMT!=0 or AMT is not NULL;
+ 
+
+==================================================================================
