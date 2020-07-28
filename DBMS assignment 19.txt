@@ -1,0 +1,49 @@
+NAME : UMESH MANJARE
+ROLLNO : 200240520110
+
+=====================================================================================
+ASSIGNMENT 19
+
+=====================================================================================
+1) Create A View That Shows All Of The Customers Who Have The Highest Ratings.
+--->
+   Create View V1_Rating 
+   As
+   Select Cname From Customers Where Rating =
+   (Select Max(Rating) From Customers) ;
+   Select * From V1_Rating ;
+
+======================================================================================
+2) Create A View That Shows The Number Of Salespeople In Each City.
+--->
+   Create View V1_Cnumcity
+   As
+   Select City,Count(Sname) From Salespeople Group By City;
+   Select * From V1_Cnumcity ;
+=======================================================================================
+3) Create A View That Shows The Average And Total Orders For Each Salesperson After
+His Or Her Name. Assume All Names Are Unique.
+--->
+   Create View V1_Sales 
+   As
+   Select Sname,Count(Onum),Avg(Onum) From Salespeople Join Orders Using(Snum) Group By Sname;
+                                     
+                                                               #Or
+   Create View V1_Sales 
+   As                                      
+   Select Salespeople.Sname,Avg(Orders.Onum),Count(Orders.Snum) From Salespeople,Orders
+   Where Salespeople.Snum=Orders.Snum Group By Sname;
+
+========================================================================================
+4) Create A View That Shows Each Salesperson With Multiple Customers.
+--->
+  Create View V2_Sales
+  As
+  Select Sname,Cname From Salespeople Join Customers Using(Snum);
+
+                                                                #Or
+         
+  Create View V2_Sales
+  As        
+  Select Sname,Count(Cname) From Salespeople Join Customers Using(Snum) Group By Sname;
+=========================================================================================

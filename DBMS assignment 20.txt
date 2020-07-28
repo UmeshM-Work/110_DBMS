@@ -1,0 +1,49 @@
+NAME: UMESH MANJARE
+ROLL NO : 200240520110
+
+===============================================================================
+ASSIGNMENT 20
+
+===============================================================================
+
+1) Which Of These Views Are Updateable (Will Allow Dml Operations)?
+-->
+a) Create View Dailyorders
+As Select Distinct Cnum, Snum, Onum, Odate From Orders;
+
+Yes it will allow
+
+
+b) Create View Custotals
+As Select Cname, Sum (Amt) Sum_Amt From Orders, Customers
+Where Orders.Cnum=Customers.Cnum
+Group By Cname;
+
+No because join is used
+
+
+c) Create View Thirdorders
+As Select * From Dailyorders Where
+Odate=’1990-10-03’;
+
+No
+
+
+d) Create View Nullcities
+As Select Snum, Sname, City
+From Salespeople
+Where City Is Null
+Or Sname Between ‘A’ And ‘Mz’; 
+
+Yes it will allow
+
+========================================================================
+2) Create A View Of The Salespeople Table Called Commissions. This View Will Include
+Only The Snum And Comm Fields. Through This View, Someone Could Enter Or Change
+Commissions, But Only To Values Between .10 And .20.*/
+
+Create View Commissions
+As
+Select Snum , Comm From Salespeople Where Comm Between .10 And .20;
+
+===============================================================================
